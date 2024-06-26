@@ -1,0 +1,12 @@
+{% extends "layout/index.html" %}
+
+{% block content %}
+
+    {% for article in articles %}
+        <h1>{{ article.title }}</h1>
+        <h2>{{ article.user }}</h2>
+        <h3>{{ article.publication_date }}</h3>
+        <h4>{{ article.content }}</h4>
+    {% endfor %}
+
+{% endblock %}

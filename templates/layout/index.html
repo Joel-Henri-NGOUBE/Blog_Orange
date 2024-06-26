@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load i18n %}
+
+    {% get_current_language as language_code %}
+    {% get_available_languages as LAN %}
+    {% get_language_info_list for LAN as lan%}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    {% for l in lan %}
+        {% comment %} {% if l.code == language_code %} {% endcomment %}
+        <a href="/{{l.code}}/blog">{{l.name_local}}</a>
+        {% comment %} {% else %} {% endcomment %}
+        {% comment %} <a href="/{{l.code}}">{{l.name_local}}</a> {% endcomment %}
+        {% comment %} {% endif %} {% endcomment %}
+    {% endfor %}
     {% block content %}
+    {{ bonjour }}
+    {% translate "Bienvenue" %}
     {% endblock %}
 </body>
 </html>

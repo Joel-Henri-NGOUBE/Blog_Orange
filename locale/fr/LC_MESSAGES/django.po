@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-27 01:17+0200\n"
+"POT-Creation-Date: 2024-06-28 16:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\main\views.py:7
+#: .\main\views.py:9
 msgid "bonjour"
 msgstr ""
 
@@ -26,6 +26,34 @@ msgstr ""
 msgid "Les articles"
 msgstr ""
 
-#: .\templates\layout\index.html:28
+#: .\templates\chat\index.html:5
+msgid "Vous pouvez discuter avec notre chatbox si vous avez des questions"
+msgstr ""
+
+#: .\templates\layout\index.html:21
 msgid "Bienvenue"
+msgstr ""
+
+#: .\templates\login\index.html:6 .\templates\signup\index.html:6
+msgid "Adresse mail"
+msgstr ""
+
+#: .\templates\login\index.html:8 .\templates\signup\index.html:10
+msgid "Mot de passe"
+msgstr ""
+
+#: .\templates\login\index.html:10
+msgid "Se connecter"
+msgstr ""
+
+#: .\templates\newpost\index.html:5
+msgid "Ajouter de nouvelles publications"
+msgstr ""
+
+#: .\templates\signup\index.html:8
+msgid "Nom d'utilisateur"
+msgstr ""
+
+#: .\templates\signup\index.html:12
+msgid "S'inscrire"
 msgstr ""

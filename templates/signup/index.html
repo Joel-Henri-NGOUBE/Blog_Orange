@@ -1,14 +1,15 @@
 {% extends "layout/index.html" %}
+{% load i18n %}
 
 {% block content %}
     <form method="POST">
         {% csrf_token %}
-        <label>Adresse mail</label>
+        <label>{% translate "Adresse mail" %}</label>
         <input type="text" name="mail" />
-        <label>Nom d'utilisateur</label>
+        <label>{% translate "Nom d'utilisateur" %}</label>
         <input type="text" name="username" />
-        <label>Mot de passe</label>
+        <label>{% translate "Mot de passe" %}</label>
         <input type="password" name="password" />
-        <button>Envoyer</button>
+        <button>{% translate "S'inscrire"%}</button>
     </form>
 {% endblock %}

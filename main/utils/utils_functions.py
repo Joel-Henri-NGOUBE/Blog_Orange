@@ -20,5 +20,7 @@ def get_route_params(route: str = "", request = None):
     }
     if request:
         context["id"] = request.session.get("id")
+        context["username"] = request.session.get("username")
+        context["mail"] = request.session.get("mail")
         context["logout"] = logout
     return context

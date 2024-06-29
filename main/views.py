@@ -11,7 +11,7 @@ from django.contrib.auth.hashers import make_password, check_password
 # print(check)
 # Create your views here.
 
-def home():
+def home(request):
     return redirect(resolve_url("blog"))
 
 def articles(request):

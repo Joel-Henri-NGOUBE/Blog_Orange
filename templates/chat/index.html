@@ -2,12 +2,15 @@
 {% load i18n %}
 
 {% block content %}
-    {% translate "Vous pouvez discuter avec notre chatbot si vous avez des questions" %}
-    <form method="POST">
-        {% csrf_token %}
-        <input type="text" name="mail" placeholder="{% translate "Posez votre question" %}" />
-        {% comment %} <label>{% translate "Mot de passe"%}</label>
-        <input type="text" name="password" />{% endcomment %}
-        <button>Envoyer</button>
-    </form>
+    <div class="chat">
+        {% translate "Vous pouvez discuter avec notre chatbot si vous avez des questions" %}
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="mail" placeholder="{% translate "Posez votre question" %}" />
+            {% comment %} <label>{% translate "Mot de passe"%}</label>
+            <input type="text" name="password" />{% endcomment %}
+            <button>Envoyer</button>
+        </form>
+    </div>
+
 {% endblock %}

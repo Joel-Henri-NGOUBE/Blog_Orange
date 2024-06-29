@@ -2,16 +2,18 @@
 {% load i18n %}
 
 {% block content %}
-{{error}}
-{{success}}
-    <form method="POST">
-        {% csrf_token %}
-        <label>{% translate "Adresse mail" %}</label>
-        <input type="text" name="mail" />
-        <label>{% translate "Nom d'utilisateur" %}</label>
-        <input type="text" name="username" />
-        <label>{% translate "Mot de passe" %}</label>
-        <input type="password" name="password" />
-        <button>{% translate "S'inscrire"%}</button>
-    </form>
+    <div class="signup">
+        {{error}}
+        {{success}}
+        <form method="POST">
+            {% csrf_token %}
+            <label>{% translate "Adresse mail" %}</label>
+            <input type="text" name="mail" />
+            <label>{% translate "Nom d'utilisateur" %}</label>
+            <input type="text" name="username" />
+            <label>{% translate "Mot de passe" %}</label>
+            <input type="password" name="password" />
+            <button>{% translate "S'inscrire"%}</button>
+        </form>
+    </div>
 {% endblock %}

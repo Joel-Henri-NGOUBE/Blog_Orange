@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     {% load i18n %}
+    {% load static %}
 
     {% get_current_language as language_code %}
     {% get_available_languages as LAN %}
@@ -9,28 +10,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/pages.css'%}" />
 </head>
 
 <body>
-    <a href="{{ blog }}">{% translate "Blog"%}</a>
-    <a href="{{ chat }}">{% translate "Chatbot"%}</a>
-    {% if id %}
-        <a href="{{ newpost }}">{% translate "Publier"%}</a>
-    {% endif %}
+    <nav class="links">
+        <a href="{{ blog }}">{% translate "Blog"%}</a>
+        <a href="{{ chat }}">{% translate "Chatbot"%}</a>
+        {% if id %}
+            <a href="{{ newpost }}">{% translate "Publier"%}</a>
+        {% endif %}
 
-    {% if id %}
-        <a href="{{ logout }}">{% translate "Se déconnecter"%}</a>
-    {% else %}
-        <a href="{{ signup }}">{% translate "Devenir membre"%}</a>
-        <a href="{{ login }}">{% translate "Se connecter"%}</a>
-    {% endif %}
+        {% if id %}
+            <a href="{{ logout }}">{% translate "Se déconnecter"%}</a>
+        {% else %}
+            <a href="{{ signup }}">{% translate "Devenir membre"%}</a>
+            <a href="{{ login }}">{% translate "Se connecter"%}</a>
+        {% endif %}
 
-    {% for l in lan %}
-        <a href="/{{l.code}}/{{global_route_name}}">{{l.name_local}}</a>
-    {% endfor %}
-    {% block content %}
-    {{ bonjour }}
-    {% translate "Bienvenue" %}
-    {% endblock %}
+        {% for l in lan %}
+            <a href="/{{l.code}}/{{global_route_name}}">{{l.name_local}}</a>
+        {% endfor %}
+    </nav>
+    
+    <div class="content">
+        <div class="sidecard">  
+            <img src="{% static '/images/profile.png'%}" alt="profile_picture" width="80px"/>
+            <div class="user-info">
+                {% if id %}
+                    <p><span>Pseudonyme:</span> <span>{{ username }}</span></p>
+                    <p><span>Email:</span> <span>{{ mail }}</span> </p>
+                {% else %}
+                    <a href="{{ signup }}">{% translate "Devenir membre"%}</a>
+                    <a href="{{ login }}">{% translate "Se connecter"%}</a>
+                {% endif %}
+            </div>
+        </div>
+        
+        {% block content %}
+        {{ bonjour }}
+        {% translate "Bienvenue" %}
+        {% endblock %}
+    </div>
+
 </body>
 </html>

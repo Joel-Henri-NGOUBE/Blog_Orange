@@ -2,13 +2,15 @@
 {% load i18n %}
 
 {% block content %}
-    {% translate "Ajouter de nouvelles publications" %}
-    <form method="POST">
-        {% csrf_token %}
-        <label>{% translate "Titre"%}</label>
-        <input type="text" name="mail" />
-        <label>{% translate "Description"%}</label>
-        <textarea name="description"></textarea>
-        {% comment %} <button>{% translate "Se connecter"%}</button> {% endcomment %}
-    </form>
+    <div class="newpost">
+        {% translate "Ajouter de nouvelles publications" %}
+        <form method="POST">
+            {% csrf_token %}
+            <label>{% translate "Titre"%}</label>
+            <input type="text" name="mail" />
+            <label>{% translate "Description"%}</label>
+            <textarea name="description"></textarea>
+            {% comment %} <button>{% translate "Se connecter"%}</button> {% endcomment %}
+        </form>
+    </div>
 {% endblock %}

@@ -3,6 +3,7 @@
 
 {% block content %}
     <div class="newpost">
+        {{message}}
         <h3>{% translate "Ajouter de nouvelles publications" %}</h3>
         <form method="POST">
             {% csrf_token %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-29 01:49+0200\n"
+"POT-Creation-Date: 2024-06-29 17:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,66 +26,79 @@ msgstr ""
 msgid "Les articles"
 msgstr ""
 
-#: .\templates\chat\index.html:5
+#: .\templates\chat\index.html:6
 msgid "Vous pouvez discuter avec notre chatbot si vous avez des questions"
 msgstr ""
 
-#: .\templates\chat\index.html:8
+#: .\templates\chat\index.html:9
 msgid "Posez votre question"
 msgstr ""
 
-#: .\templates\layout\index.html:15
-msgid "Blog"
-msgstr ""
-
-#: .\templates\layout\index.html:16
-msgid "Chatbot"
+#: .\templates\layout\index.html:12
+msgid "Blog orange"
 msgstr ""
 
 #: .\templates\layout\index.html:18
+msgid "Blog"
+msgstr ""
+
+#: .\templates\layout\index.html:19
+msgid "Chatbot"
+msgstr ""
+
+#: .\templates\layout\index.html:21 .\templates\newpost\index.html:13
 msgid "Publier"
 msgstr ""
 
-#: .\templates\layout\index.html:22
+#: .\templates\layout\index.html:25
 msgid "Se déconnecter"
 msgstr ""
 
-#: .\templates\layout\index.html:24
+#: .\templates\layout\index.html:27 .\templates\layout\index.html:45
 msgid "Devenir membre"
 msgstr ""
 
-#: .\templates\layout\index.html:25 .\templates\login\index.html:13
+#: .\templates\layout\index.html:28 .\templates\layout\index.html:46
+#: .\templates\login\index.html:15
 msgid "Se connecter"
 msgstr ""
 
-#: .\templates\layout\index.html:33
+#: .\templates\layout\index.html:42
+msgid "Pseudonyme"
+msgstr ""
+
+#: .\templates\layout\index.html:43
+msgid "Email"
+msgstr ""
+
+#: .\templates\layout\index.html:54
 msgid "Bienvenue"
 msgstr ""
 
-#: .\templates\login\index.html:9 .\templates\signup\index.html:9
+#: .\templates\login\index.html:11 .\templates\signup\index.html:10
 msgid "Adresse mail"
 msgstr ""
 
-#: .\templates\login\index.html:11 .\templates\signup\index.html:13
+#: .\templates\login\index.html:13 .\templates\signup\index.html:14
 msgid "Mot de passe"
 msgstr ""
 
-#: .\templates\newpost\index.html:5
+#: .\templates\newpost\index.html:6
 msgid "Ajouter de nouvelles publications"
 msgstr ""
 
-#: .\templates\newpost\index.html:8
+#: .\templates\newpost\index.html:9
 msgid "Titre"
 msgstr ""
 
-#: .\templates\newpost\index.html:10
+#: .\templates\newpost\index.html:11
 msgid "Description"
 msgstr ""
 
-#: .\templates\signup\index.html:11
+#: .\templates\signup\index.html:12
 msgid "Nom d'utilisateur"
 msgstr ""
 
-#: .\templates\signup\index.html:15
+#: .\templates\signup\index.html:16
 msgid "S'inscrire"
 msgstr ""

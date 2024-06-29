@@ -43,8 +43,18 @@ class NewPost(View):
         return redirect(resolve_url("login"))
     
     def post(self, request):
-        if request.session.get("id"):
-            return render(request, "newpost/index.html")
+        id = request.session.get("id")
+        if id:
+            _, title, description = request.POST.dict().values()
+            user = User.objects.filter(id=id)[0]
+            Article.objects.create(
+                title = title,
+                content = description,
+                user = user
+            )
+            context: dict = get_route_params("newpost", request)
+            context["message"] = "Publication ajoutée avec succès"
+            return render(request, "newpost/index.html", context = context)
         return redirect(resolve_url("login"))
         
 

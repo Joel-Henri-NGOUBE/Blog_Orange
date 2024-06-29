@@ -9,11 +9,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{% translate "Blog orange"%}</title>
     <link rel="stylesheet" href="{% static '/css/pages.css'%}" />
+    <link rel="icon" href="{% static '/images/open-book.png'%}" />
 </head>
 
 <body>
+
+    <div class="switch-language" style="display: none;">
+        <div class="modal">
+            <img src="{% static '/images/close.png'%}" alt="quit" width=15px">
+            <p>Changer la langue du site</p>
+            <div class="flags">
+                {% for l in lan %}
+                {% comment %} <a href="/{{l.code}}/{{global_route_name}}">{{l.name_local}}</a> {% endcomment %}
+                {% if l.code == "fr" %}
+                    <a href="/{{l.code}}/{{global_route_name}}"><img src="{% static '/images/flags/france.png'%}" alt="profile_picture" width="40px"/></a>
+                {% endif %}
+                {% if l.code == "es" %}
+                    <a href="/{{l.code}}/{{global_route_name}}"><img src="{% static '/images/flags/spain.png'%}" alt="profile_picture" width="40px"/></a>
+                {% endif %}
+                {% if l.code == "en" %}
+                    <a href="/{{l.code}}/{{global_route_name}}"><img src="{% static '/images/flags/united-kingdom.png'%}" alt="profile_picture" width="40px"/></a>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
     <nav class="links">
         <a href="{{ blog }}">{% translate "Blog"%}</a>
         <a href="{{ chat }}">{% translate "Chatbot"%}</a>
@@ -27,10 +50,15 @@
             <a href="{{ signup }}">{% translate "Devenir membre"%}</a>
             <a href="{{ login }}">{% translate "Se connecter"%}</a>
         {% endif %}
-
-        {% for l in lan %}
-            <a href="/{{l.code}}/{{global_route_name}}">{{l.name_local}}</a>
-        {% endfor %}
+        {% if language_code == "fr" %}
+            <img src="{% static '/images/flags/france.png'%}" alt="profile_picture" width="30px"/>
+        {% endif %}
+        {% if language_code == "es" %}
+            <img src="{% static '/images/flags/spain.png'%}" alt="profile_picture" width="30px"/>
+        {% endif %}
+        {% if language_code == "en" %}
+            <img src="{% static '/images/flags/united-kingdom.png'%}" alt="profile_picture" width="30px"/>
+        {% endif %}
     </nav>
     
     <div class="content">
@@ -39,8 +67,8 @@
                 <img src="{% static '/images/profile.png'%}" alt="profile_picture" width="80px"/>
                 <div class="user-info">
                     {% if id %}
-                        <p><span>Pseudonyme:</span> <span>{{ username }}</span></p>
-                        <p><span>Email:</span> <span>{{ mail }}</span> </p>
+                        <p><span>{% translate "Pseudonyme"%}:</span> <span>{{ username }}</span></p>
+                        <p><span>{% translate "Email"%}:</span> <span>{{ mail }}</span> </p>
                     {% else %}
                         <a href="{{ signup }}">{% translate "Devenir membre"%}</a>
                         <a href="{{ login }}">{% translate "Se connecter"%}</a>
@@ -54,6 +82,6 @@
         {% translate "Bienvenue" %}
         {% endblock %}
     </div>
-
+    <script src="{% static "/js/actions.js" %}"></script>
 </body>
 </html>

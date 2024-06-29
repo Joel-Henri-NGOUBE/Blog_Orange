@@ -12,7 +12,19 @@
 </head>
 
 <body>
-    {{ url }}
+    <a href="{{ blog }}">{% translate "Blog"%}</a>
+    <a href="{{ chat }}">{% translate "Chatbot"%}</a>
+    {% if id %}
+        <a href="{{ newpost }}">{% translate "Publier"%}</a>
+    {% endif %}
+
+    {% if id %}
+        <a href="{{ logout }}">{% translate "Se déconnecter"%}</a>
+    {% else %}
+        <a href="{{ signup }}">{% translate "Devenir membre"%}</a>
+        <a href="{{ login }}">{% translate "Se connecter"%}</a>
+    {% endif %}
+
     {% for l in lan %}
         <a href="/{{l.code}}/{{global_route_name}}">{{l.name_local}}</a>
     {% endfor %}

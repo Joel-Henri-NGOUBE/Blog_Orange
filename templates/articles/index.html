@@ -2,6 +2,7 @@
 {% load i18n %}
 
 {% block content %}
+    {% comment %} {{id}} {% endcomment %}
     {% translate "Les articles" %}
     {% for article in articles %}
         <h1>{{ article.title }}</h1>

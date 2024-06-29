@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-28 16:25+0200\n"
+"POT-Creation-Date: 2024-06-29 01:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,42 +18,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\main\views.py:9
+#: .\main\views.py:18
 msgid "bonjour"
 msgstr "good morning"
 
-#: .\templates\articles\index.html:5
+#: .\templates\articles\index.html:7
 msgid "Les articles"
 msgstr "The posts"
 
 #: .\templates\chat\index.html:5
-msgid "Vous pouvez discuter avec notre chatbox si vous avez des questions"
+msgid "Vous pouvez discuter avec notre chatbot si vous avez des questions"
 msgstr "You can discuss with our chatbot if you have some questions"
 
-#: .\templates\layout\index.html:21
+#: .\templates\chat\index.html:8
+msgid "Posez votre question"
+msgstr "Ask your question"
+
+#: .\templates\layout\index.html:15
+msgid "Blog"
+msgstr ""
+
+#: .\templates\layout\index.html:16
+msgid "Chatbot"
+msgstr ""
+
+#: .\templates\layout\index.html:18
+msgid "Publier"
+msgstr "Publish"
+
+#: .\templates\layout\index.html:22
+msgid "Se déconnecter"
+msgstr "Log out"
+
+#: .\templates\layout\index.html:24
+msgid "Devenir membre"
+msgstr "Become member"
+
+#: .\templates\layout\index.html:25 .\templates\login\index.html:13
+msgid "Se connecter"
+msgstr "Log in"
+
+#: .\templates\layout\index.html:33
 msgid "Bienvenue"
 msgstr "Welcome"
 
-#: .\templates\login\index.html:6 .\templates\signup\index.html:6
+#: .\templates\login\index.html:9 .\templates\signup\index.html:9
 msgid "Adresse mail"
 msgstr "Mail address"
 
-#: .\templates\login\index.html:8 .\templates\signup\index.html:10
+#: .\templates\login\index.html:11 .\templates\signup\index.html:13
 msgid "Mot de passe"
 msgstr "Password"
-
-#: .\templates\login\index.html:10
-msgid "Se connecter"
-msgstr "Log in"
 
 #: .\templates\newpost\index.html:5
 msgid "Ajouter de nouvelles publications"
 msgstr "Add new posts"
 
-#: .\templates\signup\index.html:8
+#: .\templates\newpost\index.html:8
+msgid "Titre"
+msgstr "Title"
+
+#: .\templates\newpost\index.html:10
+msgid "Description"
+msgstr ""
+
+#: .\templates\signup\index.html:11
 msgid "Nom d'utilisateur"
 msgstr "Username"
 
-#: .\templates\signup\index.html:12
+#: .\templates\signup\index.html:15
 msgid "S'inscrire"
 msgstr "Sign up"

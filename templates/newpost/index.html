@@ -3,14 +3,14 @@
 
 {% block content %}
     <div class="newpost">
-        {% translate "Ajouter de nouvelles publications" %}
+        <h3>{% translate "Ajouter de nouvelles publications" %}</h3>
         <form method="POST">
             {% csrf_token %}
-            <label>{% translate "Titre"%}</label>
+            <label>{% translate "Titre" %}</label>
             <input type="text" name="mail" />
-            <label>{% translate "Description"%}</label>
+            <label>{% translate "Description" %}</label>
             <textarea name="description"></textarea>
-            {% comment %} <button>{% translate "Se connecter"%}</button> {% endcomment %}
+            <button>{% translate "Publier" %}</button>
         </form>
     </div>
 {% endblock %}

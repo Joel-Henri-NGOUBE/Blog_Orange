@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root{
     --primary-orange: rgb(255, 168, 5);
     --secondary-orange: rgb(219, 162, 56);
@@ -8,7 +11,7 @@
 html, body{
     width: 100vw;
     height: 100vh;
-
+    font-family: "Inter";
 }
 
 *{
@@ -37,7 +40,7 @@ body{
     top: 0;
     left: 0;
     box-shadow: 1px 1px 1px 1px var(--gray);
-    background-color: white;
+    background-color: var(--primary-orange);
     /* align-self: flex-start; */
     
 }
@@ -78,9 +81,11 @@ body{
 }
 
 .links a, .links a:visited{
-    color: var(--primary-orange);
+    color: white;
     text-decoration: none;
     padding: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 .content{
@@ -139,9 +144,91 @@ body{
     overflow: auto;
 }
 
-.articles h1{
+.articles h1, .newpost h3{
     color: var(--dark-gray);
     text-transform: uppercase;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.login, .signup{
+    position: relative;
+    top: -100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: calc(100vh - 150px);
+    margin: auto;
+}
+
+.login form, .signup form, .newpost form{
+    display: flex;
+    flex-direction: column;
+    border: solid 2px var(--primary-orange);
+    padding: 30px;
+    border-radius: 15px;
+    height: max-content;
+    width: max-content;
+    /* background-color: var(--secondary-orange) */
+}
+
+.newpost form{
+    border: solid 2px black;
+}
+
+.newpost form > input, .login form > input, .signup form > input{
+    padding: 10px;
+    border-radius: 15px;
+    border: solid 2px var(--gray);
+    width: 250px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.newpost textarea{
+    padding: 10px;
+    border-radius: 15px;
+    border: solid 2px var(--gray);
+    width: 250px;
+    height: 100px;
+    margin-bottom: 20px;
+    resize: none;
+}
+
+/* .newpost form > input, .newpost textarea{
+    border: solid 2px black;
+} */
+
+.login form > label, .signup form > label{
+    padding: 5px;
+}
+
+.login form > button, .signup form > button, .newpost form > button{
+    padding: 10px 20px;
+    width: max-content;
+    /* height:  */
+    background-color: var(--primary-orange);
+    color: white;
+    border-radius: 15px;
+    border: none;
+    align-self: center;
+}
+
+.newpost form > button{
+    background-color: black;
+}
+
+button{
+    cursor: pointer;
+}
+
+.chat h3{
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p{
+    font-family: "Raleway";
 }
 

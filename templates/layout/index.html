@@ -34,18 +34,20 @@
     </nav>
     
     <div class="content">
-        <div class="sidecard">  
-            <img src="{% static '/images/profile.png'%}" alt="profile_picture" width="80px"/>
-            <div class="user-info">
-                {% if id %}
-                    <p><span>Pseudonyme:</span> <span>{{ username }}</span></p>
-                    <p><span>Email:</span> <span>{{ mail }}</span> </p>
-                {% else %}
-                    <a href="{{ signup }}">{% translate "Devenir membre"%}</a>
-                    <a href="{{ login }}">{% translate "Se connecter"%}</a>
-                {% endif %}
+        {% if not is_login_or_signup %}
+            <div class="sidecard">  
+                <img src="{% static '/images/profile.png'%}" alt="profile_picture" width="80px"/>
+                <div class="user-info">
+                    {% if id %}
+                        <p><span>Pseudonyme:</span> <span>{{ username }}</span></p>
+                        <p><span>Email:</span> <span>{{ mail }}</span> </p>
+                    {% else %}
+                        <a href="{{ signup }}">{% translate "Devenir membre"%}</a>
+                        <a href="{{ login }}">{% translate "Se connecter"%}</a>
+                    {% endif %}
+                </div>
             </div>
-        </div>
+        {% endif %}
         
         {% block content %}
         {{ bonjour }}

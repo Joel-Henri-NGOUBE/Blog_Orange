@@ -18,6 +18,10 @@ def get_route_params(route: str = "", request = None):
         "chat": chat,
         "newpost": newpost,
     }
+    is_login_or_signup = False
+    if url == signup or url == login:
+        is_login_or_signup = True
+    context["is_login_or_signup"] = is_login_or_signup
     if request:
         context["id"] = request.session.get("id")
         context["username"] = request.session.get("username")

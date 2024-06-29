@@ -3,7 +3,7 @@
 
 {% block content %}
     <div class="chat">
-        {% translate "Vous pouvez discuter avec notre chatbot si vous avez des questions" %}
+        <h3>{% translate "Vous pouvez discuter avec notre chatbot si vous avez des questions" %}</h3>
         <form method="POST">
             {% csrf_token %}
             <input type="text" name="mail" placeholder="{% translate "Posez votre question" %}" />

@@ -14,20 +14,20 @@
                     <div class="response"><p>{{ int.message }}<p></div>
                {% endif %} 
             {% endfor %} {% endcomment %}
-            <div class="question"><p>Bonjour<p></div>
-            <div class="response"><p>Bonjour<p></div>
-            <div class="question"><p>Bonjour<p></div>
-            <div class="response"><p>Bonjour<p></div>
-            <div class="question"><p>Bonjour<p></div>
-            <div class="response"><p>Bonjour<p></div>
-            <div class="question"><p>Bonjour<p></div>
-            <div class="response"><p>Bonjour<p></div>
-            <div class="question"><p>Bonjour<p></div>
-            <div class="response"><p>Bonjour<p></div>
-            <div class="question"><p>Bonjour<p></div>
-            <div class="response"><p>Bonjour<p></div>
-             
-               {% comment %} <p>{{ response }}<p> {% endcomment %}
+            {% comment %} <div class="question"></p>Bonjour<p></div>
+            <div class="response"><p>Bonjour</p></div>
+            <div class="question"><p>Bonjour</p></div>
+            <div class="response"><p>Bonjour</p></div>
+            <div class="question"><p>Bonjour</p></div>
+            <div class="response"><p>Bonjour</p></div>
+            <div class="question"><p>Bonjour</p></div>
+            <div class="response"><p>Bonjour</p></div>
+            <div class="question"><p>Bonjour</p></div>
+            <div class="response"><p>Bonjour</p></div>
+            <div class="question"><p>Bonjour</p></div>
+            <div class="response"><p>Bonjour</p></div> {% endcomment %}
+            <div class="question"><p>{{ response }}</p></div>
+            {% comment %} <p>{{ response }}</p> {% endcomment %}
         </div>
         <form method="POST">
             {% csrf_token %}

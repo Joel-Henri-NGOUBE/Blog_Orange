@@ -5,16 +5,8 @@
 {% block content %}
     <div class="chat">
         <h3>{% translate "Vous pouvez discuter avec notre chatbot si vous avez des questions" %}</h3>
-        {% comment %} <div></div> {% endcomment %}
         <div>
-            {% comment %} {% for int in interactions %}
-               {% if int.interaction == "question" %}
-                    <div class="question"><p>{{ int.message }}<p></div>
-                {% else %}
-                    <div class="response"><p>{{ int.message }}<p></div>
-               {% endif %} 
-            {% endfor %} {% endcomment %}
-            {% comment %} <div class="question"></p>Bonjour<p></div>
+            <div class="question"></p>Bonjour<p></div>
             <div class="response"><p>Bonjour</p></div>
             <div class="question"><p>Bonjour</p></div>
             <div class="response"><p>Bonjour</p></div>
@@ -25,9 +17,8 @@
             <div class="question"><p>Bonjour</p></div>
             <div class="response"><p>Bonjour</p></div>
             <div class="question"><p>Bonjour</p></div>
-            <div class="response"><p>Bonjour</p></div> {% endcomment %}
+            <div class="response"><p>Bonjour</p></div>
             <div class="question"><p>{{ response }}</p></div>
-            {% comment %} <p>{{ response }}</p> {% endcomment %}
         </div>
         <form method="POST">
             {% csrf_token %}

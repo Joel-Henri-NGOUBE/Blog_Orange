@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-29 17:10+0200\n"
+"POT-Creation-Date: 2024-06-30 22:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\main\views.py:18
+#: .\main\views.py:16
 msgid "bonjour"
 msgstr "good morning"
 
@@ -26,11 +26,11 @@ msgstr "good morning"
 msgid "Les articles"
 msgstr "The posts"
 
-#: .\templates\chat\index.html:6
+#: .\templates\chat\index.html:7
 msgid "Vous pouvez discuter avec notre chatbot si vous avez des questions"
 msgstr "You can discuss with our chatbot if you have some questions"
 
-#: .\templates\chat\index.html:9
+#: .\templates\chat\index.html:25
 msgid "Posez votre question"
 msgstr "Ask your question"
 
@@ -38,60 +38,64 @@ msgstr "Ask your question"
 msgid "Blog orange"
 msgstr "Orange blog"
 
-#: .\templates\layout\index.html:18
+#: .\templates\layout\index.html:22
+msgid "Changer la langue du site"
+msgstr "Change the site language"
+
+#: .\templates\layout\index.html:40
 msgid "Blog"
 msgstr ""
 
-#: .\templates\layout\index.html:19
+#: .\templates\layout\index.html:41
 msgid "Chatbot"
 msgstr ""
 
-#: .\templates\layout\index.html:21 .\templates\newpost\index.html:13
+#: .\templates\layout\index.html:43 .\templates\newpost\index.html:14
 msgid "Publier"
 msgstr "Publish"
 
-#: .\templates\layout\index.html:25
+#: .\templates\layout\index.html:47
 msgid "Se déconnecter"
 msgstr "Log out"
 
-#: .\templates\layout\index.html:27 .\templates\layout\index.html:45
+#: .\templates\layout\index.html:49 .\templates\layout\index.html:72
 msgid "Devenir membre"
 msgstr "Become member"
 
-#: .\templates\layout\index.html:28 .\templates\layout\index.html:46
-#: .\templates\login\index.html:15
+#: .\templates\layout\index.html:50 .\templates\layout\index.html:73
+#: .\templates\login\index.html:16
 msgid "Se connecter"
 msgstr "Log in"
 
-#: .\templates\layout\index.html:42
+#: .\templates\layout\index.html:69
 msgid "Pseudonyme"
 msgstr "Username"
 
-#: .\templates\layout\index.html:43
+#: .\templates\layout\index.html:70
 msgid "Email"
 msgstr "Mail"
 
-#: .\templates\layout\index.html:54
+#: .\templates\layout\index.html:81
 msgid "Bienvenue"
 msgstr "Welcome"
 
-#: .\templates\login\index.html:11 .\templates\signup\index.html:10
+#: .\templates\login\index.html:12 .\templates\signup\index.html:10
 msgid "Adresse mail"
 msgstr "Mail address"
 
-#: .\templates\login\index.html:13 .\templates\signup\index.html:14
+#: .\templates\login\index.html:14 .\templates\signup\index.html:14
 msgid "Mot de passe"
 msgstr "Password"
 
-#: .\templates\newpost\index.html:6
+#: .\templates\newpost\index.html:7
 msgid "Ajouter de nouvelles publications"
 msgstr "Add new posts"
 
-#: .\templates\newpost\index.html:9
+#: .\templates\newpost\index.html:10
 msgid "Titre"
 msgstr "Title"
 
-#: .\templates\newpost\index.html:11
+#: .\templates\newpost\index.html:12
 msgid "Description"
 msgstr ""
 
@@ -102,3 +106,6 @@ msgstr "Username"
 #: .\templates\signup\index.html:16
 msgid "S'inscrire"
 msgstr "Sign up"
+
+#~ msgid "Utilisateur introuvable"
+#~ msgstr "Unretrieved user"

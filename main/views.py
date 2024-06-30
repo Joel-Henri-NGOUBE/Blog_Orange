@@ -7,17 +7,7 @@ from django.contrib.auth.hashers import make_password, check_password
 from gpt4all import GPT4All
 from langchain_community.embeddings import GPT4AllEmbeddings
 
-# from pathlib import Path
-# from os.path import join
-
-# BASE_DIR = Path(__file__).resolve().parent.parent
-
 model_name = "all-MiniLM-L6-v2-f16.gguf"
-
-# model_path = BASE_DIR / "LLM"
-# print(model_path)
-# model_path = join(BASE_DIR, "/LLM/all-MiniLM-L6-v2-f16.gguf")
-# print(model_path)
 
 def home(request):
     return redirect(resolve_url("blog"))
@@ -27,7 +17,6 @@ def articles(request):
     articles = Article.objects.all()
     context: dict = get_route_params("blog", request)
     context["articles"] = articles
-    # context["id"] = request.session["id"]
     return render(request, "articles/index.html", context = context)
 
 def logout(request):
@@ -44,8 +33,10 @@ class Chat(View):
         question = request.POST.get("question")
         embeddings = GPT4AllEmbeddings(model_name=model_name)
         response = embeddings.embed_query(question)
+        
         # model = GPT4All(model_name=model_name)
         # response = model.generate(question, max_tokens=500)
+        
         context: dict = get_route_params("chat", request)
         context["response"] = response
         return render(request, "chat/index.html", context = context)
@@ -97,11 +88,14 @@ class Login(View):
                     else:
                         message["error"] = "Mot de passe incorrect"
                         return render(request, "login/index.html", context = message) 
+                    
                 else:
                     message["error"] = "Utilisateur introuvable"
                     return render(request, "login/index.html", context = message) 
+                
             message["error"]  = "Un ou plusieurs champs non renseignés"
             return render(request, "login/index.html", context = message)
+        
         return redirect(resolve_url("blog"))   
     
 class Signup(View):
@@ -130,10 +124,8 @@ class Signup(View):
                 )
                     message["success"] = "Utilisateur créé avec succès"
                     return render(request, "signup/index.html", context = message) 
+                
             message["error"]  = "Un ou plusieurs champs non renseignés"
             return render(request, "signup/index.html", context = message)
+        
         return redirect(resolve_url("blog"))
-    
-        # print(request.body.decode())
-        # print(list(request.POST.items()))
-        # print(dict(request.POST.items())) 

@@ -19,10 +19,9 @@
     <div class="switch-language" style="display: none;">
         <div class="modal">
             <img src="{% static '/images/close.png'%}" alt="quit" width=15px">
-            <p>Changer la langue du site</p>
+            <p>{% translate "Changer la langue du site" %}</p>
             <div class="flags">
                 {% for l in lan %}
-                {% comment %} <a href="/{{l.code}}/{{global_route_name}}">{{l.name_local}}</a> {% endcomment %}
                 {% if l.code == "fr" %}
                     <a href="/{{l.code}}/{{global_route_name}}"><img src="{% static '/images/flags/france.png'%}" alt="profile_picture" width="40px"/></a>
                 {% endif %}

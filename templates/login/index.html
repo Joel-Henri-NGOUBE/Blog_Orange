@@ -3,15 +3,15 @@
 
 {% block content %}
     <div class="login">
-        {{error}}
-        {% translate error%}
-        {{success}}
+        <p>{{error}}</p>
+        {% comment %} {% translate error%} {% endcomment %}
+        <p>{{success}}</p>
         <form method="POST">
             {% csrf_token %}
             <label>{% translate "Adresse mail"%}</label>
             <input type="text" name="mail" />
             <label>{% translate "Mot de passe"%}</label>
-            <input type="text" name="password" />
+            <input type="password" name="password" />
             <button>{% translate "Se connecter"%}</button>
         </form>
     </div>

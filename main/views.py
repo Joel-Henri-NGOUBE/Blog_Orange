@@ -5,14 +5,14 @@ from django.views import View
 from .utils.utils_functions import get_route_params
 from django.contrib.auth.hashers import make_password, check_password
 from gpt4all import GPT4All
-from pathlib import Path
-from os.path import join
+# from pathlib import Path
+# from os.path import join
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = Path(__file__).resolve().parent.parent
 
-model_name = "all-MiniLM-L6-v2-f16.gguf"
+model_name = "orca-mini-3b-gguf2-q4_0.gguf"
 
-model_path = BASE_DIR / "LLM"
+# model_path = BASE_DIR / "LLM"
 # print(model_path)
 # model_path = join(BASE_DIR, "/LLM/all-MiniLM-L6-v2-f16.gguf")
 # print(model_path)
@@ -40,7 +40,7 @@ class Chat(View):
         return render(request, "chat/index.html", context = context)
     def post(self, request):
         question = request.POST.get("question")
-        model = GPT4All(model_name=model_name, model_path=model_path)
+        model = GPT4All(model_name=model_name)
         response = model.generate(question, max_tokens=500)
         context: dict = get_route_params("chat", request)
         context["response"] = response

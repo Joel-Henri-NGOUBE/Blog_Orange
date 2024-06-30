@@ -4,12 +4,18 @@ from django.utils.translation import gettext
 from django.views import View
 from .utils.utils_functions import get_route_params
 from django.contrib.auth.hashers import make_password, check_password
+from gpt4all import GPT4All
+from pathlib import Path
+from os.path import join
 
-# hashed_pwd = make_password("plain_text")
-# print(hashed_pwd)
-# check = check_password("plain_text",hashed_pwd)
-# print(check)
-# Create your views here.
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+model_name = "all-MiniLM-L6-v2-f16.gguf"
+
+model_path = BASE_DIR / "LLM"
+# print(model_path)
+# model_path = join(BASE_DIR, "/LLM/all-MiniLM-L6-v2-f16.gguf")
+# print(model_path)
 
 def home(request):
     return redirect(resolve_url("blog"))
@@ -33,7 +39,12 @@ class Chat(View):
         context: dict = get_route_params("chat", request)
         return render(request, "chat/index.html", context = context)
     def post(self, request):
-        return render(request, "chat/index.html")
+        question = request.POST.get("question")
+        model = GPT4All(model_name=model_name, model_path=model_path)
+        response = model.generate(question, max_tokens=500)
+        context: dict = get_route_params("chat", request)
+        context["response"] = response
+        return render(request, "chat/index.html", context = context)
     
 class NewPost(View):
     def get(self, request):

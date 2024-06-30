@@ -69,7 +69,7 @@ msgstr ""
 
 #: .\templates\layout\index.html:43
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: .\templates\layout\index.html:54
 msgid "Bienvenue"

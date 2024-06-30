@@ -142,6 +142,7 @@ STATICFILES_DIRS = [
     "/var/www/static/",
 ]
 
+STATIC_ROOT = BASE_DIR / "static"
 # STATIC_ROOT = "/var/www/example.com/static/"
 # python manage.py collectstatic
 

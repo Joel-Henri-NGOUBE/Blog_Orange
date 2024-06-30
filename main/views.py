@@ -10,7 +10,7 @@ from gpt4all import GPT4All
 
 # BASE_DIR = Path(__file__).resolve().parent.parent
 
-model_name = "orca-mini-3b-gguf2-q4_0.gguf"
+model_name = "all-MiniLM-L6-v2-f16.gguf"
 
 # model_path = BASE_DIR / "LLM"
 # print(model_path)

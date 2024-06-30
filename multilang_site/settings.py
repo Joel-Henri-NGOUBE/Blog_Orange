@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-riixa+-&9k%s1=y(9$puzs!oksr4et7(31ii%j9fl^rd*hp#nb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["blog-orange-u862.onrender.com"]
+ALLOWED_HOSTS = ["blog-orange-u862.onrender.com", "127.0.0.1"]
 
 
 # Application definition

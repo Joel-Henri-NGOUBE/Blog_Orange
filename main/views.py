@@ -5,6 +5,8 @@ from django.views import View
 from .utils.utils_functions import get_route_params
 from django.contrib.auth.hashers import make_password, check_password
 from gpt4all import GPT4All
+from langchain_community.embeddings import GPT4AllEmbeddings
+
 # from pathlib import Path
 # from os.path import join
 
@@ -40,8 +42,10 @@ class Chat(View):
         return render(request, "chat/index.html", context = context)
     def post(self, request):
         question = request.POST.get("question")
-        model = GPT4All(model_name=model_name)
-        response = model.generate(question, max_tokens=500)
+        embeddings = GPT4AllEmbeddings(model_name=model_name)
+        response = embeddings.embed_query(question)
+        # model = GPT4All(model_name=model_name)
+        # response = model.generate(question, max_tokens=500)
         context: dict = get_route_params("chat", request)
         context["response"] = response
         return render(request, "chat/index.html", context = context)
